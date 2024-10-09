@@ -565,3 +565,46 @@ nav {
     gap: 2rem;
 }
 
+.btn-back {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 5px 20px;
+    background: linear-gradient(90deg, #131a31 0%, #0088ff 100%);
+    color: #ebf0ff;
+    border: 2px solid #00d8ff;
+    border-radius: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effects */
+.btn-back:hover {
+    color: #ffffff;
+    border-color: #00b8e4;
+    background: linear-gradient(90deg, #00b8e4 0%, #00d8ff 100%);
+    box-shadow: 0 0 20px rgba(0, 216, 255, 0.5), 0 0 40px rgba(0, 216, 255, 0.3), 0 0 60px rgba(0, 216, 255, 0.2);
+}
+
+/* Glowing Neon Effect */
+.btn-back::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: skewX(-45deg);
+    transition: all 0.5s ease;
+}
+
+/* Animation on Hover */
+.btn-back:hover::after {
+    left: 100%;
+}
